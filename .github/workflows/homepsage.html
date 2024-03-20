@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tigray community Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function getGreetingAndImage() {
+            const currentTime = new Date().getHours();
+            let greeting, imageSrc;
+
+            if (currentTime >= 5 && currentTime < 12) {
+                greeting = 'Good Morning';
+                imageSrc = 'sunraise.jpg'; alt="sunraise"
+            } else if (currentTime >= 12 && currentTime < 18) {
+                greeting = 'Good Afternoon';
+                imageSrc = 'daytime.jpg'; alt= "daytime"
+            } else {
+                greeting = 'Good Evening';
+                imageSrc = 'evening.jpg'; alt= "evening"
+            }
+
+            return { greeting, imageSrc };
+        }
+    </script>
+    <header>
+        <div class="bluelogo">
+            <a href="HomePage.html">
+                <img src="Images/bluelogo.png" alt="bluelogo">
+            </a>
+        </div>
+        <nav>
+            <ul class="main-navigation">
+                <li><a href="HomePage.html">HomePage</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Donation.html">Donation</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Greetings and images to website visitors-->  
+    <section class="greetings">
+        <h1 id="greeting"></h1>
+        <br>
+        <script>
+            const { greeting, imageSrc } = getGreetingAndImage();
+            document.getElementById('greeting').innerText = `${greeting}, Welcome to Tigray Community Christchurch`;
+            document.getElementById('timeImage').src = imageSrc;
+        </script>
+    </section>
+<!--community image-->
+	<p> We are nonprofit,non-political and non-religious organisation with goal to benefit the public.</p>
+    </section>  
+<!-- cards -->
+    <section class="cards">
+        <div class="card">
+            <img src="Images/ladies.jpg" alt="ladies">
+            <div class="container">
+                <p class="card-title">
+                Send Donation</p>
+                <p>See how you can make a difference in families’ lives with just $5 a month.</p>
+                <a href="Services.html">Click here</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/children.jpg" alt="children">
+            <div class="container">
+                <p class="card-title">
+                Become Volunteer</p>
+                <p>Our support creates empowered communities in the world.</p>
+                <a href="about us.html">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Images/newbrighten.jpg" alt="newbrighten">
+            <div class="container">
+                <p class="card-title">
+                Preserve our Culture</p>
+                <p>To promote Tigrean cultures in New Zealand society.</p>
+                <a href="about us.html">learn more</a>
+            </div>
+        </div>
+    </section>
+    <br>
+<!-- text -->
+    <section class="text">
+        <p> Tigray Community Christchurch (TCC) is a not for profit,Self help organization that reflects the rich history.</p>
+        <p>
+         To bring together our experience, skill, finance and time, strengthen unity and march together as a community
+         To create brotherhood, friendship and love among us, to preserve what is achieved so far and assure its continuity.</p>
+    </section>
+<!-- slider -->
+    <section class="slider">
+        <div class="slideBox">
+            <div class="mySlides">
+                <img src="Images/teshager.jpg" alt="teshager">
+                <p>Tigray Community X-Mass, will be celebrated on January8, 2024</p>
+            </div>
+            <div class="mySlides">
+                <img src="Images/sitting.jpg" alt="sitting">
+                <p>Together To Help The World Better!
+                  Please help us change lives around the world.</p>
+            </div>
+            <div class="mySlides">
+                <img src="Images/running.jpg" alt="running">
+                <p>Walking or running in group to engage individualls in to activities to gether</p>
+            </div>
+            <div class="mySlides">
+                <img src="Images/outside.jpg" alt="outside">
+                <p>TCC 3nd Year Anniversary, February 19,2024</p>
+            </div>
+            <button class="left" onclick="plusDivs(-1)">&#9665;</button>
+            <button class="right" onclick="plusDivs(1)">&#9655;</button>
+        </div>
+    </section>
+<!-- footer -->
+    <footer>
+        <section class="footer">
+            <ul class="footer-navigation">
+                <li><a href="HomePage.html">HomePage</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Donation.html">Donation</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+            <ul class="footer-navigation">
+                <li><a href="HomePage.html">HomePage</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="servics.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Donation.html">Donation</a></li>
+            </ul>
+            <p>Join us in our Mission
+                With your support we can continue to meet the needs of the community.
+                If you would like the opportunity to contribute to the work we do at Tigray Community, by volunteering your time or donating towards our cause,
+                we would love to hear from you.</p>
+            <div class="bluelogo">
+                <a href="HomePage.html">
+                    <img src="Images/bluelogo.png" alt="bluelogo">
+                </a>
+            </div>
+        </section>
+    </footer>
+<!-- javascript for slider -->
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+	
+    function plusDivs(n) {
+        showDivs(slideIndex += n)
+    }
+	
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
+</body>
+</html>  
